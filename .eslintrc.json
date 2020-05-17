@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended", // you can question what's in there
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "prettier/react"
+  ], // prettier prettier/react must be at the end
+  "rules": {
+    "react/prop-types": 0, // turn it off, type-checking (not useful when using typescript)
+    "no-console": 1,
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 1
+  },
+  "plugins": ["react", "import", "jsx-a11y", "react-hooks"],
+  "parser": "babel-eslint", // use babel to understand this code
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module", // use import and exports
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
